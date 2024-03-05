@@ -14,6 +14,10 @@ body {
     font-family: "Bebas Neue", sans-serif;
 }
 
+body h1 {
+    display: flex;
+    justify-content: center;
+}
 header {
     padding: 30px 0;
 }
@@ -54,7 +58,7 @@ header nav a:active {
     font-size: 16px;
     min-height: 40.62em;
     color: aliceblue;
-    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%,rgba(0, 0, 0, 0.5) 100%), url(../img/interstellar.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%,rgba(0, 0, 0, 0.5) 100%), url(../assets/img/interstellar.png);
     background-position: center center;
     background-size: cover;
     margin-bottom: 3.12em;
@@ -99,4 +103,24 @@ header nav a:active {
 
 .movie .button i {
     margin-right: 1.25em;
+}
+
+/*PELICULAS FAVORITAS*/
+
+#films {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#films div img:hover {
+    -webkit-transform:scale(1.3);transform:scale(1.3);
+    overflow:hidden;
+    transition-duration: 0.3s;
+}
+
+#films .div-movie{
+    color: #B9D6F2;
+    text-align: center;
+
 }
