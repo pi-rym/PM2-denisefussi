@@ -18,6 +18,8 @@ function films(movie) {
     filmsSection.appendChild(movieElement)
     movieElement.appendChild(containerMovie)
 }
-tempData.forEach(films)
+
+$.get('https://students-api.2.us-1.fl0.io/movies', (data)=> data.forEach(films))
+
 
 console.log(tempData);
