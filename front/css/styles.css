@@ -12,7 +12,6 @@
 body {
     background: var(--fondo);
     font-family: "Bebas Neue", sans-serif;
-    font-weight: bold;
 }
 
 body h1 {
