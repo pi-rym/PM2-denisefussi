@@ -4,7 +4,7 @@
   "description": "testing con jest",
   "main": "index.js",
   "scripts": {
-    "test": "jest  --wachAll"
+    "test": "jest  --watchAll"
   },
   "author": "",
   "license": "ISC",

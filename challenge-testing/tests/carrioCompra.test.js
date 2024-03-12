@@ -1,1 +1,0 @@
-const carritoCompra = require("../tests/index")

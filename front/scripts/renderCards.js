@@ -1,4 +1,5 @@
 const filmSection = document.getElementById('films') 
+const axios = require('axios')
 
 const renderCards = (data) => {
     data.forEach((movie) => {
@@ -21,6 +22,13 @@ const renderCards = (data) => {
     })
 }
 
+//PROMESAS
+
+const getFilms = () => {
+    axios.getAdapter('')
+    .then(({data}) => data.forEach(renderCards))
+    .catch((error) => console.log(error.message))
+}
 
 module.exports = renderCards;
 
