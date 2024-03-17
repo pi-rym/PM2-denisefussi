@@ -1,4 +1,4 @@
-const carritoCompra = require("./index")
+const CarritoCompra = require("./index")
 
 describe('Clase CarritoCompra', ()=> {
     let carritoCompra;
@@ -6,7 +6,6 @@ describe('Clase CarritoCompra', ()=> {
     beforeEach(()=> {
         carritoCompra = new CarritoCompra()
     })
-
 
     describe('Sobre el constructor de la clase CarritoCompra', () => {
         it('CarritoCompra deberia ser una clase',()=> {
@@ -32,7 +31,7 @@ describe('Metodos de la clase CarritoCompra', ()=> {
         id: 2,
         name: 'Lapiz negro',
         price: 900,
-        quantity: 5 
+        quantity: 2 
     }
 
     it ('Deberia tener un metodo llamado agregarProducto', ()=> {
@@ -48,7 +47,7 @@ describe('Metodos de la clase CarritoCompra', ()=> {
          carritoCompra.agregarProducto(product1)
          expect(carritoCompra.products).toContain(product1)
     })
-    it ('El metodo calcularTotal deberia poder calcular el totalde la compra sumando los precios de todos los productos en el carrito', ()=> {
+    it ('El metodo calcularTotal deberia poder calcular el total de la compra sumando los precios de todos los productos en el carrito', ()=> {
         carritoCompra.agregarProducto(product1)
         carritoCompra.agregarProducto(product2)
         
@@ -62,7 +61,7 @@ describe('Metodos de la clase CarritoCompra', ()=> {
     carritoCompra.agregarProducto(product1)
     carritoCompra.agregarProducto(product2)
     
-    const subtotal = product1.price * product1.quantity + product2.price * product2.quantity
+    const subtotal = product1.price * product1.quantity + product2.price * product2.quantity;
 
     const porcentajeDescuento = 15
 

@@ -1,11 +1,10 @@
 const filmSection = document.getElementById('films') 
-const axios = require('axios')
 
-const renderCards = (data) => {
-    data.forEach((movie) => {
+ function renderCards(movie) {
     const movieElement = document.createElement('div')
     const containerMovie = document.createElement('div')
-    containerMovie.classList.add('div-movie')
+    //me falta agregar una clase para el css para que quede el texto dentro de la img.
+    containerMovie.classList.add('divMovie')
 
     movieElement.innerHTML = `<img src="${movie.poster}" alt="${movie.title}">`
 
@@ -19,16 +18,8 @@ const renderCards = (data) => {
 
     filmSection.appendChild(movieElement)
     movieElement.appendChild(containerMovie)
-    })
-}
+    }
 
-//PROMESAS
-
-const getFilms = () => {
-    axios.getAdapter('')
-    .then(({data}) => data.forEach(renderCards))
-    .catch((error) => console.log(error.message))
-}
 
 module.exports = renderCards;
 

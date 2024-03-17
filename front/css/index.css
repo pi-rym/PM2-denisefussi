@@ -119,7 +119,7 @@ header nav a:active {
     transition-duration: 0.3s;
 }
 
-#films div .div-movie {
+#films div .divMovie {
     color: #B9D6F2;
     text-align: center;
 }
@@ -128,7 +128,7 @@ header nav a:active {
 
 }
 
-#films div .div-movie{
+#films div .divMovie{
         animation-duration: 3s;
         animation-name: slidein;
         animation-iteration-count: 3;
