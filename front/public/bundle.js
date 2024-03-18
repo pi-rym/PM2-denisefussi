@@ -15,7 +15,7 @@
   \****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\")\n\nconst renderCards = __webpack_require__(/*! ./renderCards */ \"./scripts/renderCards.js\")\n\n//PROMESAS\n\n//const getFilms = () => {\n    //axios.get('https://students-api.up.railway.app/movies')\n    //.then(({ data })=> data.forEach(renderCards))\n  //  .catch((error)=> console.log(error.message))\n//}\n\n//Async Await \n\nconst getFilms = async () => {\n    try {\n        const { data } = await axios.get('https://students-api.up.railway.app/movies')\n        console.log(data);\n        data.forEach(renderCards)\n    } catch (error) {\n        console.log(error.message);\n        \n    }\n}\n\nmodule.exports = getFilms;\n\n//# sourceURL=webpack://front/./scripts/handler.js?");
+eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\")\n\nconst renderCards = __webpack_require__(/*! ./renderCards */ \"./scripts/renderCards.js\")\n\n//PROMESAS\n\n//const getFilms = () => {\n    //axios.get('https://students-api.up.railway.app/movies')\n    //.then(({ data })=> data.forEach(renderCards))\n  //  .catch((error)=> console.log(error.message))\n//}\n\n//Async Await \n\nconst getFilms = async () => {\n    try {\n        const { data } = await axios.get('http://localhost:3000/movies')\n        console.log(data);\n        data.forEach(renderCards)\n    } catch (error) {\n        console.log(error.message);\n        \n    }\n}\n\nmodule.exports = getFilms;\n\n//# sourceURL=webpack://front/./scripts/handler.js?");
 
 /***/ }),
 

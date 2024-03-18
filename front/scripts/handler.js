@@ -14,7 +14,7 @@ const renderCards = require("./renderCards")
 
 const getFilms = async () => {
     try {
-        const { data } = await axios.get('https://students-api.up.railway.app/movies')
+        const { data } = await axios.get('http://localhost:3000/movies')
         console.log(data);
         data.forEach(renderCards)
     } catch (error) {
