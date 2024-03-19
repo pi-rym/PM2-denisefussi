@@ -8,8 +8,7 @@ class Movies {
             this.duration = duration;
             this.genre = genre;
             this.rate = rate;
-            this.poster = poster;
-        
+            this.poster = poster;   
     }
 }
 
