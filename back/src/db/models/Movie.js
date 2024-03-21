@@ -7,7 +7,7 @@ const movieSchema = new Schema({
     duration: String,
     genre: Array,
     rate: Number,
-    poster: String,
+    poster: String
   });
 //el model interactua con la base de datos. y trae los datos determinados a la coleccion. 
 const Movie =  model('Movie', movieSchema)

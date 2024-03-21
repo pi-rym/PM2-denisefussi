@@ -6,12 +6,12 @@ module.exports = {
     getFilms: async () => {
     try {//declaramos una respuesta
         const movies = await Movie.find()
-        const moviesMap = movies.map((movie) => {
+        //const moviesMap = movies.map((movie) => {
             // if(moviesValidation(movie)){
             //     return new Movies(movie);
             // }
-        })
-        return moviesMap;
+        //})
+        return movies;
     } catch (error) {
         throw new Error(error.message);        
     }

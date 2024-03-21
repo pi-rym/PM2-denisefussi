@@ -12,7 +12,7 @@ const moviesController = async (req, res) => {
 const postMoviesController = async (req, res)=>{
 
     try {
-      await  postFilms(req.body)
+      await postFilms(req.body)
 
       res.status(201).json({message:"Peli creada exitosamente"})
 
