@@ -1,9 +1,9 @@
-function moviesValidation(movieObject) {
-    if (!movieObject.title || !movieObject.year || !movieObject.director){
-        throw new Error ('Missing equired fields');
-    } 
-    return true;
-}
+// function moviesValidation(movieObject) {
+//     if (!movieObject.title || !movieObject.year || !movieObject.director){
+//         throw new Error ('Missing equired fields');
+//     } 
+//     return true;
+// }
 
 const validateMovies = (req, res, next) => {
     const { title, year, duration, director, genre, rate, poster} = req.body
@@ -13,4 +13,5 @@ const validateMovies = (req, res, next) => {
     next()
 }
 
-module.exports = moviesValidation;
+module.exports = {
+    validateMovies }

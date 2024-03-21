@@ -1,5 +1,5 @@
 const { Movies } = require("../types/class")
-const moviesValidation = require('../middlewares/moviesVlidations')
+//const moviesValidation = require('../middlewares/moviesVlidations')
 const Movie = require('../db/models/Movie')
 
 module.exports = {
@@ -7,9 +7,9 @@ module.exports = {
     try {//declaramos una respuesta
         const movies = await Movie.find()
         const moviesMap = movies.map((movie) => {
-            if(moviesValidation(movie)){
-                return new Movies(movie);
-            }
+            // if(moviesValidation(movie)){
+            //     return new Movies(movie);
+            // }
         })
         return moviesMap;
     } catch (error) {
@@ -21,10 +21,10 @@ module.exports = {
         try {
             const newMovie = await Movie.create(movie)
 
-            return newMovie
+            return newMovie 
         } catch (error) {
             throw new Error(error.message);  
-        }
+        } 
     },
 
     updateMovie: async (title) => {
