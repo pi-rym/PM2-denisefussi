@@ -12,6 +12,6 @@ class Movies {
     }
 }
 
-module.exports = {Movies} 
+module.exports = { Movies } 
 
 //nunca pasar a una funcion mas de tres argumentos, sino endria que ser uun objeto

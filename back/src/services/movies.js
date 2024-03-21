@@ -1,18 +1,17 @@
 const { Movies } = require("../types/class")
-const moviesValidation = require('../utils/validations/moviesVlidations')
-const Movie = require('../models/Movie')
+const moviesValidation = require('../middlewares/moviesVlidations')
+const Movie = require('../db/models/Movie')
 
 module.exports = {
     getFilms: async () => {
-    try {
-        //declaramos una respuesta
+    try {//declaramos una respuesta
         const movies = await Movie.find()
-        // const moviesCollection = movies.map((movie) => {
-        //     if(moviesValidation(movie)){
-        //         return new Movies(movie);
-        //     }
-        // })
-        return movies;
+        const moviesMap = movies.map((movie) => {
+            if(moviesValidation(movie)){
+                return new Movies(movie);
+            }
+        })
+        return moviesMap;
     } catch (error) {
         throw new Error(error.message);        
     }

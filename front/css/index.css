@@ -135,3 +135,14 @@ header nav a:active {
         animation-direction: alternate;
     
 }
+
+
+footer {
+    width: 90%;
+    margin: auto;
+}
+
+footer div {
+    color: #B9D6F2;
+    margin: auto;
+}

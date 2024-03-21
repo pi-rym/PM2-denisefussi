@@ -9,7 +9,7 @@ const movieSchema = new Schema({
     rate: Number,
     poster: String,
   });
-//el model interactua con la base de datos. 
+//el model interactua con la base de datos. y trae los datos determinados a la coleccion. 
 const Movie =  model('Movie', movieSchema)
 
 module.exports = Movie;

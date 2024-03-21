@@ -51,3 +51,41 @@ header nav a:hover {
 header nav a:active {
     color:pink;
 }
+
+/* MAIN */
+
+section {
+    width: 90%;
+    margin: auto;
+}
+section h2 {
+    color: #B9D6F2;
+    margin: auto;
+
+}
+
+form label {
+    color: #B9D6F2;
+    display: block;
+    font-weight: bold;
+    color: #CDB499;
+
+}
+
+form div .text {
+    color: pink;
+} 
+
+/* FOOTER */
+
+footer {
+    width: 90%;
+    margin: auto;
+}
+
+footer div {
+    color: #B9D6F2;
+    margin: auto;
+}
+
+

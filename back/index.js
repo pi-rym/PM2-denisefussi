@@ -3,7 +3,7 @@ const { PORT } = process.env
 
 //tiene la resposabilidad de levantar el servidor 
 const app = require('./src/server')
-const dbCon = require('./src/config/dbConnection')
+const dbCon = require('./src/db/config/dbConnection')
 
 dbCon()
 .then(() => {

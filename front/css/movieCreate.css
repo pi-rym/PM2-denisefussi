@@ -1,0 +1,142 @@
+:root {
+    --celeste:#B9D6F2;
+    --fondo: #003559
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: "Bebas Neue", sans-serif;
+}
+
+body h1 {
+    display: flex;
+    justify-content: center;
+}
+header {
+    padding: 30px 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotype {
+    font-weight: normal;
+    color: pink;
+    font-size: 40px;
+}
+
+header nav a {
+    color: var(--celeste);
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover {
+    color: #006DAA;
+}
+header nav a:active {
+    color:pink;
+}
+
+/* MAIN */
+
+section {
+    width: 50%;
+    margin: 50px auto;
+    background-color:#006DAA;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+section h3 {
+    color: #B9D6F2;
+}
+
+input[name="genre[]"]{
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+form label {
+    color: #B9D6F2;
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #d1d1cb;
+    border-radius: 5px;
+}
+
+.div-button {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#btnSubmit {
+    color: pink;
+    display: block;
+    margin: 20px 10px;
+    width: 70%;
+    padding: 10px;
+    background-color:var(--fondo);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+#btnClean {
+    color: pink;
+    display: block;
+    margin: 20px 10px;
+    width: 70%;
+    background-color: var(--fondo);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+
+#btnClean:hover{
+    background-color:#B9D6F2;
+    color: var(--fondo)
+}
+
+#btnSubmit:hover{
+    background-color:#B9D6F2;
+    color: var(--fondo)
+}
+/* FOOTER */
+
+footer {
+    width: 90%;
+    margin: auto;
+}
+
+footer div {
+    color: #B9D6F2;
+    margin: auto;
+}
