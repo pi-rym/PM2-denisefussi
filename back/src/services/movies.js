@@ -26,13 +26,13 @@ module.exports = {
             throw new Error(error.message);  
         } 
     },
-
-    updateMovie: async (title) => {
-        try {
-            Movie.findOneAndUpdate({ title }, { $inc: {}})
-        } catch (error) {
-            throw new Error(error.message);  
-        }
-    },
 }
+//     updateMovie: async (title) => {
+//         try {
+//             Movie.findOneAndUpdate({ title }, { $inc: {}})
+//         } catch (error) {
+//             throw new Error(error.message);  
+//         }
+//     },
+// }
 

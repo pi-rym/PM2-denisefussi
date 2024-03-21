@@ -47,18 +47,35 @@ function validateCheckbox() {
     }
 }
 
- function buttonSubmit(event) {
-    event.preventDefault()
-    const genres = validateCheckbox()
+function buttonSubmit(event) {
+    event.preventDefault();
+    const genres = validateCheckbox();
+
     const postFilm = async () => {
-    try {
-        const postMovie = await axios.post('http://localhost:3000/movies')
-        return postMovie.data
-    } catch (error) {
-        if(![title.value, year.value, director.value, duration.value, rate.value, poster.value, genres].every(Boolean)) return alert('Faltan algunos campos')
+        try {
+        
+        const postMovie = await axios.post('http://localhost:3000/movies', {
+            title: title.value,
+            year: year.value,
+            director: director.value,
+            duration: duration.value,
+            rate: rate.value,
+            poster: poster.value,
+            genre: genres
+            });
+
+            alert('Película agregada exitosamente');
+        } catch (error) {
+            if (![title.value, year.value, director.value, duration.value, rate.value, poster.value, genres].every(Boolean)) {
+                alert('Faltan algunos campos');
+            } else {
+                alert('Error al agregar la película. Inténtelo de nuevo más tarde.');
+            }
         }
-}    
+    }
+ postFilm();
 }
+
 
 function cleanInputs() {
     title.value = ''
@@ -76,11 +93,5 @@ function cleanInputs() {
     }
 }
 
-btnSubmit.addEventListener('click',buttonSubmit, () => {
-    postFilm().then((data) => {
-        document.querySelector(".succes").innerHTML= "Se ha creado la pelicula"
-    }).catch((error) => {
-        document.querySelector(".succes").innerHTML= error.message
-    });
-    })
+btnSubmit.addEventListener('click',buttonSubmit)
 btnClean.addEventListener('click', cleanInputs)
